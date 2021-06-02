@@ -1,4 +1,5 @@
-# befunge-interpreter
+### befunge-interpreter
+
 Interpreter for [Befunge-93](https://github.com/catseye/Befunge-93), implemented in Python.
 
 From the reference repository, About Befunge-93:
