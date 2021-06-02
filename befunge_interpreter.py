@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+import sys
 from random import choice
 
 def interpret(original):    
@@ -79,12 +82,5 @@ def interpret(original):
             x = (x+step) % len(code[y])
 
 if __name__ == '__main__':
-    assert interpret(">987v>.v\nv456<  :\n>321 ^ _@") == "123456789"
-    assert interpret('>25*"!dlroW olleH":v\n                v:,_@\n                >  ^') == "Hello World!\n"
-    assert interpret("08>:1-:v v *_$.@ \n  ^    _$>\:^") == "40320"
-    assert interpret("01->1# +# :# 0# g# ,# :# 5# 8# *# 4# +# -# _@") == "01->1# +# :# 0# g# ,# :# 5# 8# *# 4# +# -# _@"
-    assert interpret(R"""2>:3g" "-!v\  g30          <
- |!`"&":+1_:.:03p>03g+:"&"`|
- @               ^  p3\" ":<
-2 2345678901234567890123456789012345678
-32""")
+    with open(sys.argv[1], 'r') as input:
+        print(interpret(input.read()))
